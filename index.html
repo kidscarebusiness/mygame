@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#121212">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Color Rush | Reflex Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Splash Screen -->
+        <div id="splash-screen" class="screen active">
+            <div class="logo">
+                <span class="color-r">C</span>
+                <span class="color-o">o</span>
+                <span class="color-l">l</span>
+                <span class="color-o">o</span>
+                <span class="color-r2">r</span>
+                <span class="rush">Rush</span>
+            </div>
+            <p class="tagline">Test Your Reflexes!</p>
+        </div>
+
+        <!-- Main Menu -->
+        <div id="main-menu" class="screen">
+            <h1 class="game-title">Color Rush</h1>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-label">Best Score</span>
+                    <span id="Label9" class="stat-value">0</span>
+                </div>
+            </div>
+            <button id="Button6" class="btn-primary">Play Game</button>
+            <div class="settings">
+                <div class="setting-item">
+                    <span>Music</span>
+                    <label class="switch">
+                        <input type="checkbox" id="music-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <span>Sound</span>
+                    <label class="switch">
+                        <input type="checkbox" id="sound-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="instruction-container">
+                <p id="Label11" class="status-msg"></p>
+                <h2 id="Label10">Tap <span id="target-color-text">Red</span></h2>
+            </div>
+
+
+            <div class="game-header">
+                <div class="score-box">
+                    <span class="label">Score</span>
+                    <span id="Label8">0</span>
+                </div>
+                <div class="level-box">
+                    <span class="label">Level</span>
+                    <span id="Label7">1</span>
+                </div>
+            </div>
+
+            <div class="timer-container">
+                <div id="timer-bar"></div>
+            </div>
+
+            <div class="grid-wrapper">
+
+                <div class="grid-row">
+                    <button id="Button7" class="color-btn red" data-color="Red"></button>
+                    <button id="Button8" class="color-btn blue" data-color="Blue"></button>
+                </div>
+                <div class="grid-row">
+                    <button id="Button9" class="color-btn green" data-color="Green"></button>
+                    <button id="Button10" class="color-btn yellow" data-color="Yellow"></button>
+                </div>
+            </div>
+
+
+            <div class="game-footer">
+                <div class="settings">
+                    <div class="setting-item">
+                        <span>Music</span>
+                        <label class="switch small">
+                            <input type="checkbox" id="game-music-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Sound</span>
+                        <label class="switch small">
+                            <input type="checkbox" id="game-sound-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen">
+            <h2 id="game-over-title">Game Over!</h2>
+            <div class="final-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Score</span>
+                    <span id="final-score" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Best</span>
+                    <span id="final-best" class="stat-value">0</span>
+                </div>
+            </div>
+            <button id="Button11" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Audio assets -->
+    <audio id="audio-music" loop src="assets/music.mp3"></audio>
+    <audio id="audio-correct" src="assets/correct.mp3"></audio>
+    <audio id="audio-wrong" src="assets/wrong.mp3"></audio>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

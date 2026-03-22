@@ -1,0 +1,16 @@
+{
+  "name": "Color Rush",
+  "short_name": "ColorRush",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5903/5903511.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
